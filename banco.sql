@@ -13,3 +13,15 @@ CREATE TABLE pedidos (
     data_pedido DATE NOT NULL,
     FOREIGN KEY (id_produto) REFERENCES produtos(id_produto)
 );
+
+-- Insere registros na tabela Produtos
+INSERT INTO produtos (nome, preco) VALUES ('Café Expresso', 5.00);
+INSERT INTO produtos (nome, preco) VALUES ('Pão de Queijo', 3.50);
+INSERT INTO produtos (nome, preco) VALUES ('Bolo Caseiro', 12.00);
+
+-- Insere registros na tabela Pedidos
+INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (1, 2, '2025-08-30');
+INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (2, 5, '2025-08-29');
+INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (3, 1, '2025-08-28');
+
+
