@@ -19,9 +19,14 @@ INSERT INTO produtos (nome, preco) VALUES ('Café Expresso', 5.00);
 INSERT INTO produtos (nome, preco) VALUES ('Pão de Queijo', 3.50);
 INSERT INTO produtos (nome, preco) VALUES ('Bolo Caseiro', 12.00);
 
--- Insere registros na tabela Pedidos
+-- Insere regstros na tabela Pedidos
 INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (1, 2, '2025-08-30');
 INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (2, 5, '2025-08-29');
 INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (3, 1, '2025-08-28');
+
+
+-- Utilizando o comando Update para atualizar os itens da tabela Produtos e Pedidos
+UPDATE produtos SET preco = 6.00 WHERE id_produto = 1;
+UPDATE pedidos SET quantidade = 3 WHERE id_pedido = 1;
 
 
