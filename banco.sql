@@ -1,4 +1,4 @@
--- Criando as tabelasProdutos e Pedidos
+-- Criando as tabelas Produtos e Pedidos
 
 CREATE TABLE produtos (
     id_produto INT PRIMARY KEY AUTO_INCREMENT,
@@ -19,7 +19,7 @@ INSERT INTO produtos (nome, preco) VALUES ('Café Expresso', 5.00);
 INSERT INTO produtos (nome, preco) VALUES ('Pão de Queijo', 3.50);
 INSERT INTO produtos (nome, preco) VALUES ('Bolo Caseiro', 12.00);
 
--- Insere regstros na tabela Pedidos
+-- Insere registros na tabela Pedidos
 INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (1, 2, '2025-08-30');
 INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (2, 5, '2025-08-29');
 INSERT INTO pedidos (id_produto, quantidade, data_pedido) VALUES (3, 1, '2025-08-28');
@@ -44,7 +44,3 @@ JOIN produtos pr ON p.id_produto = pr.id_produto;
 SELECT p.id_pedido, pr.nome, (p.quantidade * pr.preco) AS valor_total
 FROM pedidos p
 JOIN produtos pr ON p.id_produto = pr.id_produto;
-
-
-
-
