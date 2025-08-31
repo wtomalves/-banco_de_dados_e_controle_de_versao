@@ -30,3 +30,21 @@ UPDATE produtos SET preco = 6.00 WHERE id_produto = 1;
 UPDATE pedidos SET quantidade = 3 WHERE id_pedido = 1;
 
 
+-- Removendo um pedido com o uso do comando DELETE
+DELETE FROM pedidos WHERE id_pedido = 3;
+DELETE FROM produtos WHERE id_produto = 2;
+
+-- Exemplo do uso do coamndo SELECT e JOIN, para mostrar nome do produto junto com dos pedidos e calcula valor total do pedido
+SELECT * FROM produtos;
+
+SELECT p.id_pedido, pr.nome, p.quantidade, p.data_pedido
+FROM pedidos p
+JOIN produtos pr ON p.id_produto = pr.id_produto;
+
+SELECT p.id_pedido, pr.nome, (p.quantidade * pr.preco) AS valor_total
+FROM pedidos p
+JOIN produtos pr ON p.id_produto = pr.id_produto;
+
+
+
+
